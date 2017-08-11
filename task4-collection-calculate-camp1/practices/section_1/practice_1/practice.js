@@ -1,6 +1,6 @@
 function collect_same_elements(collection_a, collection_b) {
  var result = [];
-		collection_a.forEach(item=>{
+		collection_a.forEach(function(item){
 			if(collection_b.includes(item))
 				result.push(item);
 		});
