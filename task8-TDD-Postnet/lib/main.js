@@ -2,6 +2,7 @@ var NumberToBarcode = require("../lib/NumberToBarcode.js");
 var NumToBar = NumberToBarcode();
 function main(input){
     if(!input) return '';
+    input += '';
     var output = '';
     output = input.length < 20? NumtoBarcode(input):BarcodeToZip(input);
     return output;
