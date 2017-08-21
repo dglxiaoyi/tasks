@@ -39,6 +39,16 @@ describe("Barcode instead of zip code", function(){
         expect(expect_string).to.equal(result);
     });
 
+    
+});
+
+describe("Barcode instead of zip code", function(){
+    it("returns wrong given wrong Barcode",function(){
+         var result = main('|:::|||:|:::::||||::::|::|||:::::|:|::||::|::|:|:|:|:|::|');
+         var expect_string = 'This is wrong';
+          expect(expect_string).to.equal(result);
+    });
+
     it("returns Zip-10 given Barcode", function(){
         var result = main('|:::|||:|:::::||||::::|::|||:::::|:|::||::|::|:|:|::::|||');
         var expect_string = '1910402345';
