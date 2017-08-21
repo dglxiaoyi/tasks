@@ -23,7 +23,7 @@ describe("Barcode instead of zip code", function(){
     });
 
     it("returns Barcode given 5 Zip", function(){
-        var result = main('12345');
+        var result = main(12345);
         var expect_string = '|:::||::|:|::||::|::|:|:|::|:|:|';
         expect(expect_string).to.equal(result);
     });
