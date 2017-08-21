@@ -7,10 +7,8 @@ var NumToBar = NumberToBarcode();
 function main(input){
     if(!input) return '';
     //如果输入为空 返回空
-    var output = '';
-    output = input.length < 20? NumtoBarcode(input):BarcodeToZip(input);
+    return input.length < 20? NumtoBarcode(input):BarcodeToZip(input);
     //判断输入类型 长度小于20为  邮编转条码    反之   条码转邮编
-    return output;
 }
 
 function NumtoBarcode(num){
