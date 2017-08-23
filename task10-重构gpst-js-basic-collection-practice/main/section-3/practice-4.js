@@ -12,14 +12,14 @@ function find(collection, ch) {
 
 function summarize(collection) {
     let result = [];
-    for (let item of collection) {
+    collection.forEach((item) =>{
         let obj = find(result, item)
         if (obj) {
             obj.count++;
         } else {
             result.push({key: item, count: 1});
         }
-    }
+    },this);
     return result;
 }
 
@@ -36,14 +36,14 @@ function push(result, key, count) {
 
 function expand(collection) {
     let result = [];
-    for (let item of collection) {
+    collection.forEach((item) =>{
         if (item.length === 1) {
             result.push(item);
         } else {
             let {key, count} = split(item);
             push(result, key, count);
         }
-    }
+    },this);
     return result;
 }
 
@@ -53,20 +53,20 @@ function includes(collection, ch) {
             return true;
         }
     }
-
+    
     return false;
 }
 
 function discount(collection, promotionItems) {
     let result = [];
-    for (let item of collection) {
-        let key = item.key;
+    collection.forEach((item) =>{
+         let key = item.key;
         let count = item.count;
         if (includes(promotionItems, key)) {
             count = count - Math.floor(count / 3);
         }
         result.push({key, count});
-    }
+    },this);
     return result;
 }
 

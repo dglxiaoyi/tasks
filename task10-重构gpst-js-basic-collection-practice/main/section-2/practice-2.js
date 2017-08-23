@@ -12,14 +12,14 @@ function find(collection, ch) {
 
 function summarize(collection) {
     let result = [];
-    for (let item of collection) {
+    collection.forEach((item) => {
         let obj = find(result, item)
         if (obj) {
             obj.count++;
         } else {
             result.push({key: item, count: 1});
         }
-    }
+    }, this);
     return result;
 }
 

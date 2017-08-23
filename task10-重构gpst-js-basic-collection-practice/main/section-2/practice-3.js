@@ -12,14 +12,15 @@ function find(collection, ch) {
 
 function summarize(collection) {
     let result = [];
-    for (let item of collection) {
+    collection.forEach((item) => {
         let obj = find(result, item)
         if (obj) {
             obj.summary++;
         } else {
             result.push({name: item, summary: 1});
         }
-    }
+        
+    }, this);
     return result;
 }
 
@@ -49,14 +50,14 @@ function push(result, key, count) {
 
 function expand(collection) {
     let result = [];
-    for (let item of collection) {
-        if (item.length === 1) {
+    collection.forEach((item) => {
+       if (item.length === 1) {
             result.push(item);
         } else {
             let {key, count} = split(item);
             push(result, key, count);
-        }
-    }
+        } 
+    }, this);
     return result;
 }
 

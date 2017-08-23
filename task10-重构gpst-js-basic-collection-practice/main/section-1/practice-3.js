@@ -12,10 +12,10 @@ function includes(collection, ch) {
 
 module.exports = function collectSameElements(collectionA, objectB) {
     let result = [];
-    for (let item of collectionA) {
+    collectionA.forEach((item) => {
         if (includes(objectB.value, item)) {
             result.push(item);
         }
-    }
+    }, this);
     return result;
 }
