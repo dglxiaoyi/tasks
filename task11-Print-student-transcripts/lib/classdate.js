@@ -23,13 +23,40 @@ module.exports =  {
             'sum': 345
         }
     },
-    'class2':{},
-    'class3':{},
-    'class4':{},
-    'class5':{},
-    'class6':{},
-    'class7':{},
-    'class8':{},
-    'class9':{},
-    'class10':{}
+    'class2':{
+        'aver': 0,
+        'median': 0
+    },
+    'class4':{
+        'aver': 0,
+        'median': 0
+    },
+    'class3':{
+        'aver': 0,
+        'median': 0
+    },
+    'class5':{
+        'aver': 0,
+        'median': 0
+    },
+    'class6':{
+        'aver': 0,
+        'median': 0
+    },
+    'class7':{
+        'aver': 0,
+        'median': 0
+    },
+    'class8':{
+        'aver': 0,
+        'median': 0
+    },
+    'class9':{
+        'aver': 0,
+        'median': 0
+    },
+    'class10':{
+        'aver': 0,
+        'median': 0
+    }
 }
